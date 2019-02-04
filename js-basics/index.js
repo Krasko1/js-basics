@@ -1,10 +1,11 @@
-console.log(false || 'Krasko');
-console.log(false || 1);
-console.log(false || 1 || 2);
+const readPermission = 4;
+const writePermission = 2;
+const executePermission = 1;
 
-// let userColor = 'blue';
-let userColor = null;
-let defaultColor = 'red';
-let currentColor = userColor || defaultColor;
+let myPermission = 0;
+// myPermission = myPermission | readPermission | writePermission;
+myPermission = myPermission | writePermission;
 
-console.log(currentColor);
+let message = myPermission & readPermission ? 'yes' : 'no';
+
+console.log(message);
