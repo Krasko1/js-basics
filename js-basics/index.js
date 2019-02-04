@@ -1,4 +1,10 @@
-let points = 110;
-let type = points > 100 ? 'gold' : 'silver';
+let x = true;
+let y = false;
 
-console.log(type);
+let z = x || y;
+
+console.log(z);
+
+let h = !z;
+
+console.log(h);
