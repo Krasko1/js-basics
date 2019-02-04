@@ -1,2 +1,4 @@
-console.log('1' === 1);
-console.log('1' == 1);
+let points = 110;
+let type = points > 100 ? 'gold' : 'silver';
+
+console.log(type);
