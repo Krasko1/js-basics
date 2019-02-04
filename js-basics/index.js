@@ -1,10 +1,10 @@
-let x = true;
-let y = false;
+console.log(false || 'Krasko');
+console.log(false || 1);
+console.log(false || 1 || 2);
 
-let z = x || y;
+// let userColor = 'blue';
+let userColor = null;
+let defaultColor = 'red';
+let currentColor = userColor || defaultColor;
 
-console.log(z);
-
-let h = !z;
-
-console.log(h);
+console.log(currentColor);
