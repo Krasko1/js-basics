@@ -1,4 +1,4 @@
-let x = 10;
+let x = 1;
 
-x = x * 3;
-x *= 3;
+console.log(x > 0);
+console.log(x === 1);
