@@ -1,9 +1,12 @@
-function greet(name, lastName){
-    console.log('Hello ' + name + ' ' + lastName);
-}
+let x = 10;
+let y = 3;
 
-function square(number){
-    return number * number;
-}
+console.log(x + y);
+console.log(x - y);
+console.log(x * y);
+console.log(x / y);
+console.log(x % y);
+console.log(x ** y);
 
-console.log(square(2));
+console.log(x++);
+console.log(--y);
