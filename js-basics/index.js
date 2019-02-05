@@ -2,6 +2,8 @@ const circle = {
     radius: 1
 };
 
+// circle.constructor
+// new Number()
 // circle = {};
 
 circle.color = 'yellow';
