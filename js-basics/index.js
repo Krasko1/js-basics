@@ -1,14 +1,12 @@
-const name = 'John';
+const now = new Date();
 
-const message = `This is my
-'first' message`;
+console.log(now);
 
-const another = `Hi ${name} ${2 + 3},
+const date1 = new Date('May 11 2018 09:00');
+const date2 = new Date(2018, 4, 11, 9);
 
+now.setFullYear(2017);
 
-thank you,
-
-
-Bye`;
-
-console.log(message);
+console.log(now.toDateString());
+console.log(now.toTimeString());
+console.log(now.toISOString());
