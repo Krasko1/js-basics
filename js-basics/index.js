@@ -1,7 +1,12 @@
-let i = 0;
+const person = {
+    name: 'Vlada',
+    age: 32
+};
 
-do {
-    if(i % 2 !== 0)
-        console.log(i);
-    i++;
-} while(i <= 5);
+for(let key in person)
+    console.log(key, person[key]);
+
+const colors = ['red', 'green', 'blue'];
+
+for(let index in colors)
+    console.log(index, colors[index]);
