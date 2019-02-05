@@ -1,12 +1,8 @@
-const person = {
-    name: 'Vlada',
-    age: 32
-};
+let number = max(1, 2);
 
-for(let key in person)
-    console.log(key, person[key]);
+console.log(number);
 
-const colors = ['red', 'green', 'blue'];
+function max(a, b){
+    return (a > b) ? a : b;
+}
 
-for(let color of colors)
-    console.log(color);
