@@ -1,8 +1,12 @@
-showNumbers(10);
+const array = [null, undefined, 0, '', false, NaN, 5, 4, 2];
+console.log(countTruthy(array));
 
-function showNumbers(limit){
-    for(let i = 0; i <= limit; i++){
-        const message = (i % 2 === 0) ? 'EVEN' : 'ODD';
-        console.log(i, message);
-    }
+function countTruthy(array){
+    let count = 0;
+    
+    for(let value of array)
+        if(value)
+            count++;
+
+    return count;
 }
