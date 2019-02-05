@@ -1,20 +1,3 @@
-const circle = {
-    radius: 1,
-    draw(){
-        console.log('draw');
-    }
-};
+let circle = {};
 
-// const another = {};
-// for(let key in circle)
-//     another[key] = circle[key];
-
-// const another = Object.assign({}, circle);
-
-// const another = Object.assign({
-//     color: 'red'
-// }, circle);
-
-const another = {...circle};
-
-console.log(another);
+console.log(circle);
