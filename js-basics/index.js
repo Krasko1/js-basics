@@ -1,12 +1,12 @@
-const now = new Date();
+const address = {
+    street:'Jugoslovenska',
+    city:'Lalic',
+    zipCode:25234
+};
 
-console.log(now);
+function showAddress(address){
+    for(let key in address)
+        console.log(key, address[key]);
+}
 
-const date1 = new Date('May 11 2018 09:00');
-const date2 = new Date(2018, 4, 11, 9);
-
-now.setFullYear(2017);
-
-console.log(now.toDateString());
-console.log(now.toTimeString());
-console.log(now.toISOString());
+showAddress(address);
