@@ -1,12 +1,19 @@
-const address = {
-    street:'Jugoslovenska',
-    city:'Lalic',
-    zipCode:25234
-};
-
-function showAddress(address){
-    for(let key in address)
-        console.log(key, address[key]);
+function createAddress(street, city, zipCode){
+    return{
+        street,
+        city,
+        zipCode
+    };
 }
 
-showAddress(address);
+const another = createAddress('a','b',1);
+// console.log(another);
+
+function Address(street, city, zipCode){
+    this.street = street;
+    this.city = city;
+    this.zipCode = zipCode;
+}
+
+const third = new Address('c','d',2);
+console.log(third);
