@@ -1,13 +1,10 @@
-function createAddress(street, city, zipCode){
-    return{
-        street,
-        city,
-        zipCode
-    };
-}
+const address1 = new Address('a','b','c');
+const address2 = new Address('a','b','c');
+const address3 = address1;
 
-const another = createAddress('a','b',1);
-// console.log(another);
+console.log(areEqual(address1, address2));
+console.log(areSame(address1, address2));
+console.log(areSame(address1, address3));
 
 function Address(street, city, zipCode){
     this.street = street;
@@ -15,5 +12,12 @@ function Address(street, city, zipCode){
     this.zipCode = zipCode;
 }
 
-const third = new Address('c','d',2);
-console.log(third);
+function areEqual(address1, address2){
+    return address1.street === address2.street &&
+        address1.city === address2.city &&
+        address1.zipCode === address2.zipCode;
+}
+
+function areSame(address1, address2){
+    return address1 === address2;
+}
