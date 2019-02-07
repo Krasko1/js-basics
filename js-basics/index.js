@@ -1,7 +1,8 @@
-const numbers = [1,2,3,4];
+let numbers = [1,2,3,4];
 
-const last = numbers.pop();
+numbers = [];
+numbers.length = 0;
+numbers.slice(0,numbers.length);
 
-const first = numbers.shift();
-
-numbers.splice(2,2);
+while(numbers.length > 0)
+    numbers.pop();
