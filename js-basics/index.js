@@ -1,34 +1,9 @@
-// const numbers = [2,3,1];
-// numbers.sort();
-// console.log(numbers);
+const numbers = [1, -1, 2, 3];
 
-// numbers.reverse();
-// console.log(numbers);
-
-// const courses = [
-//     { id: 1, name: 'Node.js'},
-//     { id: 2, name: 'Javascript'}
-// ];
-
-// courses.sort(function(a, b){
-//     if(a.name < b.name) return -1;
-//     if(a.name > b.name) return 1;
-//     return 0;
-// });
-
-const courses = [
-    { id: 1, name: 'Node.js'},
-    { id: 2, name: 'javascript'}
-];
-
-courses.sort(function(a, b){
-    const nameA = a.name.toLowerCase();
-    const nameB = b.name.toLowerCase();
-
-    if(nameA < nameB) return -1;
-    if(nameA > nameB) return 1;
-    return 0;
+const allPositive = numbers.every(function(value){
+    return value >= 0;
 });
 
-
-console.log(courses);
+const atLeastOnePositive = numbers.some(function(value){
+    return value >= 0;
+});
