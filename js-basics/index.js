@@ -1,8 +1,7 @@
-const courses = [
-    {id:1, name:'a'},
-    {id:2, name:'b'}
-];
+const numbers = [1,2,3,4];
 
-const course = courses.find(course => course.name === 'a');
+const last = numbers.pop();
 
-console.log(course);
+const first = numbers.shift();
+
+numbers.splice(2,2);
