@@ -1,8 +1,9 @@
-let numbers = [1,2,3,4];
+const first = [1,2,3];
+const first = [{id:1}];
+const second = [4,5,6];
 
-numbers = [];
-numbers.length = 0;
-numbers.slice(0,numbers.length);
+const combined = first.concat(second);
 
-while(numbers.length > 0)
-    numbers.pop();
+const slice = combined.slice(2,4);
+const slice = combined.slice(2);
+const slice = combined.slice();
