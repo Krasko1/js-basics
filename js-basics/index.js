@@ -1,19 +1,12 @@
-const numbers = [1, -1, 2, 3];
+const numbers = arrayFromRange(-10, 4);
 
-// let sum = 0;
-// for(let n of numbers)
-    // sum += n;
+console.log(numbers);
 
-// const sum = numbers.reduce((accumulator, currentValue) => {
-//     return accumulator + currentValue;
-// }, 0);
+function arrayFromRange(min, max){
+    const output = [];
 
-// const sum = numbers.reduce((accumulator, currentValue) => {
-//     return accumulator + currentValue;
-// });
+    for(let i = min; i <= max; i++)
+        output.push(i);
 
-const sum = numbers.reduce(
-    (accumulator, currentValue) => accumulator + currentValue
-);
-
-console.log(sum);
+    return output;
+}
