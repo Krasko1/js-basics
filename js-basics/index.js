@@ -1,11 +1,16 @@
-// NO:
-// function interest(principal, rate = 3.5, years){
-function interest(principal, rate = 3.5, years = 5){
-    // rate = rate || 3.5;
-    // years = years || 5;
+const person = {
+    firstName: 'Vlada',
+    lastName: 'Krasko',
+    get fullname(){
+        return `${person.firstName} ${person.lastName}`;
+    },
+    set fullname(value){
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
 
-    return principal * rate / 100 * years;
-}
+person.fullname = 'Iboja Tot-Djerdj';
 
-// console.log(interest(10000, 3.5, 5));
-console.log(interest(10000));
+console.log(person);
