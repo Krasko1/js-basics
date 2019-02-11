@@ -1,19 +1,11 @@
-// function sum(...args){
-//     return args.reduce((a, b) => a + b);
-// }
+// NO:
+// function interest(principal, rate = 3.5, years){
+function interest(principal, rate = 3.5, years = 5){
+    // rate = rate || 3.5;
+    // years = years || 5;
 
-// console.log(sum(1, 2, 3, 4, 5));
-
-function sum(discount, ...prices){
-    const total = prices.reduce((a, b) => a + b);
-    return total * (1 - discount);
+    return principal * rate / 100 * years;
 }
 
-console.log(sum(0.1, 20, 30));
-
-// NO:
-// function sum(discount, ...prices, value){
-//     const total = prices.reduce((a, b) => a + b);
-//     return total * (1 - discount);
-// }
-
+// console.log(interest(10000, 3.5, 5));
+console.log(interest(10000));
