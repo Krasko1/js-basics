@@ -1,11 +1,16 @@
-walk();
-
-function walk(){
-    console.log('walk');
+function sum(){
+    let total = 0;
+    for(let value of arguments)
+        total += value;
+    return total;
 }
 
-// run();
+// function sum(a, b){
+     // return a + b;
+// }
 
-const run = function(){
-    console.log('run');
-};
+// console.log(sum(1, 2));
+// console.log(sum(1));
+// console.log(sum());
+console.log(sum(1, 2, 3, 4, 5));
+
