@@ -1,28 +1,33 @@
-const person = {
-    firstName: 'Vlada',
-    lastName: 'Krasko',
-    get fullname(){
-        return `${person.firstName} ${person.lastName}`;
-    },
-    set fullname(value){
-        if(typeof value !== 'string')
-            throw new Error('Value is not a string');
-        
-        const parts = value.split(' ');
+// const video = {
+//     title: 'a',
+//     play() {
+//         console.log(this);
+//     }
+// };
 
-        if(parts.length !== 2)
-            throw new Error('Enter a first name and last name');
+// video.play();
 
-        this.firstName = parts[0];
-        this.lastName = parts[1];
+function playVideo() {
+    console.log(this);
+}
+
+// playVideo();
+
+function Video(title) {
+    this.title = title;
+    console.log(this);
+}
+
+// const v = new Video('b');
+
+const video = {
+    title: 'a',
+    tags: ['a', 'b', 'c'],
+    showTags() {
+        this.tags.forEach(function(tag){
+            console.log(this.title, tag);
+        }, this);
     }
 };
 
-try{
-    person.fullname = '';
-}
-catch(e){
-    alert(e);
-}
-
-console.log(person);
+video.showTags();
