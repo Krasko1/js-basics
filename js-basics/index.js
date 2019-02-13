@@ -1,33 +1,47 @@
-// const video = {
-//     title: 'a',
-//     play() {
-//         console.log(this);
-//     }
-// };
+const video = {
+    title: 'a',
+    tags: ['a', 'b', 'c'],
+    showTags() {
+        // not good
+        const self = this;
+        this.tags.forEach(function(tag){
+            console.log(self.title, tag);
+        }, this);
+    }
+};
 
-// video.play();
+// video.showTags();
 
-function playVideo() {
-    console.log(this);
-}
+// function playVideo(a, b) {
+//     console.log(this);
+// }
 
 // playVideo();
+// playVideo.call({name: 'Vlada'}, 1, 2);
+// playVideo.apply({name: 'Vlada'}, [1, 2]);
+// playVideo.bind({name: 'Vlada'})();
 
-function Video(title) {
-    this.title = title;
-    console.log(this);
-}
-
-// const v = new Video('b');
-
-const video = {
+const video1 = {
     title: 'a',
     tags: ['a', 'b', 'c'],
     showTags() {
         this.tags.forEach(function(tag){
             console.log(this.title, tag);
-        }, this);
+        }.bind(this));
     }
 };
 
-video.showTags();
+// video1.showTags();
+
+const video2 = {
+    title: 'a',
+    tags: ['a', 'b', 'c'],
+    showTags() {
+        this.tags.forEach(tag => {
+            console.log(this.title, tag);
+        });
+    }
+};
+
+video2.showTags();
+
