@@ -1,47 +1,9 @@
-const video = {
-    title: 'a',
-    tags: ['a', 'b', 'c'],
-    showTags() {
-        // not good
-        const self = this;
-        this.tags.forEach(function(tag){
-            console.log(self.title, tag);
-        }, this);
-    }
-};
+function sum(...items){
+    if(items.length === 1 && Array.isArray(items[0]))
+        items = [...items[0]];
 
-// video.showTags();
+    return items.reduce((a, b) => a + b);
+}
 
-// function playVideo(a, b) {
-//     console.log(this);
-// }
-
-// playVideo();
-// playVideo.call({name: 'Vlada'}, 1, 2);
-// playVideo.apply({name: 'Vlada'}, [1, 2]);
-// playVideo.bind({name: 'Vlada'})();
-
-const video1 = {
-    title: 'a',
-    tags: ['a', 'b', 'c'],
-    showTags() {
-        this.tags.forEach(function(tag){
-            console.log(this.title, tag);
-        }.bind(this));
-    }
-};
-
-// video1.showTags();
-
-const video2 = {
-    title: 'a',
-    tags: ['a', 'b', 'c'],
-    showTags() {
-        this.tags.forEach(tag => {
-            console.log(this.title, tag);
-        });
-    }
-};
-
-video2.showTags();
-
+console.log(sum(1, 2, 3, 4));
+console.log(sum([1, 2, 3, 4]));
